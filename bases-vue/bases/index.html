@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js intro</title>
+
+</head>
+
+<body>
+    <!-- Vue va a tener control absoluto de este div -->
+    <div id="myApp">
+        <h3>{{quote}}</h3>
+        <blockquote>- {{author}}</blockquote>
+        
+        <!-- Para eventos v-on -->
+        <button v-on:click="changeQuote">
+            Change quote
+        </button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
