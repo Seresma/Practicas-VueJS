@@ -1,3 +1,6 @@
+<!-- CTRL + k + c para comentar -->
+<!-- CTRL + k + u para descomentar -->
+
 <template>
     <h2>{{ customTitle }}</h2>
     <p>{{ counter }} <sup>2</sup> = {{ counter * counter }}</p>
