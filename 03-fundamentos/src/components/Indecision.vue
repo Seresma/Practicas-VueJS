@@ -3,7 +3,7 @@
 
 <template>
   <!-- Para v-bind shortcut : se utiliza para bindear atributos -->
-    <!-- v-if para que solo se muestre en caso de que no sea undefined -->
+  <!-- v-if para que solo se muestre en caso de que no sea undefined -->
   <img v-if="img" :src="img" alt="bg">
   <div class="bg-dark"></div>
   <div class="indecision-container">
@@ -11,7 +11,7 @@
     <p>Recuerda terminar con un signo de interrogacion (?)</p>
     <div v-if="isValidQuestion">
       <h2>{{ question }}</h2>
-      <h1>{{ answer === "yes" ? "Sí"  : "No" }}</h1>
+      <h1>answer</h1>
     </div>
   </div>
 </template>
@@ -32,20 +32,30 @@ export default {
 
   methods: {
     async getAnswer() {
-      this.answer = "Pensando..."
 
-      const {answer, image} = await fetch("https://yesno.wtf/api").then(r => r.json())
+      try {
+        this.answer = "Pensando..."
 
-      this.answer = answer
-      this.img = image
+        const { answer, image } = await fetch("https://yesno.wtf/api").then(r => r.json())
+
+        this.answer = answer === "yes" ? "Sí" : "No"
+        this.img = image
+      } catch (error) {
+        console.log("IndecisionComponent", error);
+        this.answer = "No se pudo cargar de la API"
+        this.img = null
+      }
+
     },
   },
 
   // Para observarbles en ciertos objetos se tiene que llamar igual que la propiedad
   watch: {
     question(value, oldValue) {
-      
+
       this.isValidQuestion = false
+
+      console.log({ value });
 
       if (!value.includes('?')) return
 

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Indecision Component debe de hacer match con el snapshot 1`] = `
+<!-- Para v-bind shortcut : se utiliza para bindear atributos -->
+<!-- v-if para que solo se muestre en caso de que no sea undefined -->
+<!--v-if-->
+<div class="bg-dark"></div>
+<div class="indecision-container"><input type="text" placeholder="Hazme una pregunta">
+  <p>Recuerda terminar con un signo de interrogacion (?)</p>
+  <!--v-if-->
+</div>
+`;

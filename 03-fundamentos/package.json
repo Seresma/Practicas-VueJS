@@ -5,7 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "test:unit -u": "vue-cli-service test:unit -u",
+    "test:unit counter": "vue-cli-service test:unit counter",
+    "test:unit indecision": "vue-cli-service test:unit indecision"
   },
   "dependencies": {
     "core-js": "^3.8.3",
