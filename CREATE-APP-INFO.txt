@@ -1,0 +1,6 @@
+Abrir terminal y escribir vue create [nombre-del-proyecto]
+Elegir "Manually select features"
+Quitamos linter y seleccionamos Unit tests y le damos a seguir
+Seleccionamos jest
+Seleccionamos in dedicated files
+Y ponemos n para no guardar la configuracion
